@@ -7,9 +7,10 @@ h1 {
     text-align: center;
 }
 
-#taskInput {
+#taskInput, #categoryInput {
     width: 70%;
     padding: 10px;
+    margin-right: 10px;
 }
 
 #addTaskButton {
@@ -25,4 +26,16 @@ li {
     padding: 10px;
     background: #f4f4f4;
     margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    margin-left: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
 }
