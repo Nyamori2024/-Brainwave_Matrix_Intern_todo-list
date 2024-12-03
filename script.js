@@ -100,3 +100,33 @@ function loadTasks() {
 
 // Load tasks from local storage on page load
 window.onload = loadTasks;
+
+// Filter functionality
+document.getElementById('filterAll').onclick = function() {
+    filterTasks('all');
+};
+
+document.getElementById('filterActive').onclick = function() {
+    filterTasks('active');
+};
+
+document.getElementById('filterCompleted').onclick = function() {
+    filterTasks('completed');
+};
+
+function filterTasks(status) {
+    const taskListItems = document.querySelectorAll('#taskList li');
+    taskListItems.forEach(item => {
+        const isCompleted = item.classList.contains('completed');
+        if (status === 'all' || (status === 'active' && !isCompleted) || (status === 'completed' && isCompleted)) {
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Dark mode toggle
+document.getElementById('toggleDarkMode').onclick = function() {
+    document.body.classList.toggle('dark-mode');
+};

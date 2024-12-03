@@ -1,20 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
     text-align: center;
 }
 
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 #taskInput, #categoryInput {
-    width: 70%;
+    width: 30%;
     padding: 10px;
     margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #addTaskButton {
     padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addTaskButton:hover {
+    background-color: #0056b3;
+}
+
+.filter-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0;
 }
 
 ul {
@@ -29,13 +66,23 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s;
 }
 
-button {
-    margin-left: 10px;
+li.completed {
+    background: #d4edda;
 }
 
 .completed {
     text-decoration: line-through;
     color: gray;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode li {
+    background: #444;
 }
